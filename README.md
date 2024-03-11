@@ -68,11 +68,11 @@ python3 main.py \
 
 ### Different noise scenario.
 
-<p align="center"><img width="40%" src="docs/different-noise-results.png"/></p>
+<p align="center"><img width="50%" src="docs/different-noise-results.png"/></p>
 
 ### Ablation experiments.
 
-<p align="center"><img width="40%" src="docs/ablation-experiments-results.png"/></p>
+<p align="center"><img width="50%" src="docs/ablation-experiments-results.png"/></p>
 
 ## Others
 
