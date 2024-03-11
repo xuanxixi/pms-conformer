@@ -89,7 +89,7 @@ If you find this code useful for your research, please cite our paper.
 
 ```
 @article{xuanxixi,
-  title={Multi-Scenario Speaker Recognition Model Based on Conformer},
+  title={Conformer-based Speaker Recognition Model for Real-time Multi-scenarios},
   author={Xuan Xi and Han Runping and Gao Jingxin},
   journal={Computer Engineering and Applications},
   doi={10.3778/j.issn.1002-8331.2210-0145},
