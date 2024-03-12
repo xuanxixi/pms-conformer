@@ -1,10 +1,35 @@
 # PMS-Conformer
 
+This repository is modified based on * [MFA-Conformer](https://github.com/zyzisyz/mfa_conformer).
+
 This repository contains the training code accompanying the paper "PMS-Conformer: Conformer-based Speaker Recognition Model for Real-time Multi-scenarios.", which is published in the journal 《Computer Engineering and Applications》 with an impact factor of 4.092.
 
 <p align="center"><img width="95%" src="docs/pms-conformer.png" /></p>
 
 To handle the problems of poor performances of speaker verification systems, appearing in multiple scenarios with cross-domain utterances, long-duration utterances and noisy utterances, a real-time robust speaker recognition model, PMS-Conformer, is designed based on Conformer in this paper. The architecture of the PMS-Conformer is inspired by the state-of-the-art model named MFA-Conformer. PMS-Conformer has made the improvements on the acoustic feature extractor, network components and loss calculation module of MFA-Conformer respectively, having the novel and effective acoustic feature extractor and the robust speaker embedding extractor with high generalization capability. PMS-Conformer is trained on VoxCeleb1&2 dataset, and it is compared with the baseline MFA-Conformer and ECAPA-TDNN, and extensive comparison experiments are conducted on the speaker verification tasks. The experimental results show that on VoxMovies with cross-domain utterances, SITW with long-duration utterances and VoxCeleb-O processed by adding noise to its utterances, the ASV system built with PMS-Conformer is more competitive than those built with MFA-Conformer and ECAPA-TDNN respectively.  Moreover, the trainable params and RTF of the speaker embedding extractor of PMS-Conformer are significantly lower than those of ECAPA-TDNN. All evaluation experiment results demonstrate that PMS-Conformer exhibits good performances in real-time multi- scenarios.
+## System Description
+
+The specific details can be found of my paper "Conformer-based Speaker Recognition Model for Real-time Multi-scenarios,", please check the Session 1, `PMS-Conformer`.
+
+### Dependencies
+
+Note: That is the setting based on my device(), you can modify the torch and torchaudio version based on your device.
+
+Start from building the environment
+```
+conda create -n PMS python=3.7.9
+source activate PMS
+```
+git 
+```
+git https://github.com/xuanxixi/pms-conformer.git
+cd pms-conformer
+```
+Start from the existing environment
+```
+pip install -r requirements.txt
+```
+
 ## Data Preparation
 
 * [VoxCeleb 1&2](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/)
