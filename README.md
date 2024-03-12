@@ -13,7 +13,7 @@ The specific details can be found of my paper "Conformer-based Speaker Recogniti
 
 ### Dependencies
 
-Note: That is the setting based on my device(), you can modify the torch and torchaudio version based on your device.
+Note: That is the setting based on my device, you can modify the torch and torchaudio version based on your device.
 
 Start from building the environment
 ```
