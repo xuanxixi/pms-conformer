@@ -75,23 +75,6 @@ class Task(LightningModule):
             self.encoder = transformer_cat(embedding_dim=self.hparams.embedding_dim, 
                     num_blocks=self.hparams.num_blocks, input_layer=self.hparams.input_layer)
 
-        elif self.hparams.encoder_name == "conformer_cat":
-            print("num_blocks is {}".format(self.hparams.num_blocks))
-            self.encoder = conformer_cat(embedding_dim=self.hparams.embedding_dim, 
-                    num_blocks=self.hparams.num_blocks, input_layer=self.hparams.input_layer,
-                    pos_enc_layer_type=self.hparams.pos_enc_layer_type)
-
-        elif self.hparams.encoder_name == "new_conformer_cat":
-            print("num_blocks is {}".format(self.hparams.num_blocks))
-            self.encoder = new_conformer_cat(embedding_dim=self.hparams.embedding_dim,
-                    num_blocks=self.hparams.num_blocks, input_layer=self.hparams.input_layer,
-                    pos_enc_layer_type=self.hparams.pos_enc_layer_type)
-
-        elif self.hparams.encoder_name == "squeeze_conformer_cat":
-            print("num_blocks is {}".format(self.hparams.num_blocks))
-            self.encoder = squeeze_conformer_cat(embedding_dim=self.hparams.embedding_dim,
-                    num_blocks=self.hparams.num_blocks, input_layer=self.hparams.input_layer,
-                    pos_enc_layer_type=self.hparams.pos_enc_layer_type)
 
         elif self.hparams.encoder_name == "CNTF_conformer_cat":
             print("num_blocks is {}".format(self.hparams.num_blocks))
@@ -309,8 +292,8 @@ class Task(LightningModule):
                             # default="/home/xuanxi/mfa/mfa_conformer-master/exps/exps21/epoch=37_cosine_eer=0.66.ckpt")
         #"/home/xuanxi/文档/mfa_conformer-master/exps/exps1/epoch=3_cosine_eer=1.52.ckpt"
         parser.add_argument("--loss_name", type=str, default="sc-aamsoftmax")#amsoftmax
-        parser.add_argument("--encoder_name", type=str, default="new_conformer_cat")#conformer_cat
-        # parser.add_argument("--encoder_name", type=str, default="conformer_cat")#ecapa_tdnn
+        parser.add_argument("--encoder_name", type=str, default="conformer")
+        # parser.add_argument("--encoder_name", type=str, default="ecapa_tdnn")
 
         # parser.add_argument("--train_csv_path", type=str, default="/home/xxuan/dataset/list/train_list_7205_cityu.csv")
         parser.add_argument("--train_csv_path", type=str, default="/home/xxuan/dataset/list/vox1-1211-trainlist.csv")
@@ -370,8 +353,7 @@ def cli_main():
     trainer = Trainer(
             max_epochs=args.max_epochs,
             plugins=DDPPlugin(find_unused_parameters=False),
-            # gpus=AVAIL_GPUS,
-            gpus=[1],
+            gpus=AVAIL_GPUS,
             num_sanity_val_steps=-1,
             sync_batchnorm=True,
             callbacks=[checkpoint_callback, lr_monitor],
@@ -380,9 +362,9 @@ def cli_main():
             accumulate_grad_batches=1,
             log_every_n_steps=25,
             )
-    # if args.eval:
-    #     trainer.test(model, datamodule=dm)
-    # else:
+    if args.eval:
+        trainer.test(model, datamodule=dm)
+    else:
     trainer.fit(model, datamodule=dm)
 
 
