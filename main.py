@@ -273,7 +273,7 @@ class Task(LightningModule):
                             type=str,
                             default=None)
                             # default = "/home/xxuan/pms-conformer-2023/exps/mfa/epoch=15_cosine_eer=0.65.ckpt")
-                            # default="/home/xxuan/pms-conformer-2023/exps/pms/epoch=37_cosine_eer=0.66.ckpt")
+                            # default="/home/xxuan/pms-conformer-2023/exps/pms/epoch=16_cosine_eer=0.66.ckpt")
                             # default = "/home/xuanxi/mfa/mfa_conformer-master/exps/exps21/epoch=37_cosine_eer=0.66.ckpt")
                             # default="/home/xuanxi/mfa/mfa_conformer-master/exps/exps20/epoch=8_cosine_eer=0.86.ckpt")
                             # default="/home/xuanxi/mfa/mfa_conformer-master/exps/exps2/epoch=11_cosine_eer=0.96.ckpt")
