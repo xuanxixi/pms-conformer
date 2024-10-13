@@ -21,7 +21,7 @@ The specific details can be found of my paper "Conformer-based Speaker Recogniti
 
 ## Sub-center AAM-Softmax 
 
-<p align="center"><img width="80%" src="docs/4.png"/></p>
+<p align="center"><img width="100%" src="docs/4.png"/></p>
 
 ### Dependencies
 
