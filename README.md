@@ -13,15 +13,15 @@ The specific details can be found of my paper "Conformer-based Speaker Recogniti
 
 ## Acoustic Feature Extractor
 
-<p align="center"><img width="75%" src="docs/2.png"/></p>
+<p align="center"><img width="50%" src="docs/2.png"/></p>
 
 ## Conv_Conformer Component
 
-<p align="center"><img width="75%" src="docs/3.png"/></p>
+<p align="center"><img width="80%" src="docs/3.png"/></p>
 
 ## Sub-center AAM-Softmax 
 
-<p align="center"><img width="75%" src="docs/4.png"/></p>
+<p align="center"><img width="80%" src="docs/4.png"/></p>
 
 ### Dependencies
 
@@ -103,15 +103,15 @@ python3 main.py \
 
 ### Long-duration scenario.
 
-<p align="center"><img width="55%" src="docs/8.png" /></p>
+<p align="center"><img width="75%" src="docs/8.png" /></p>
 
 ### Different noise scenario.
 
-<p align="center"><img width="60%" src="docs/9.png"/></p>
+<p align="center"><img width="75%" src="docs/9.png"/></p>
 
 ### Ablation experiments.
 
-<p align="center"><img width="60%" src="docs/10.png"/></p>
+<p align="center"><img width="75%" src="docs/10.png"/></p>
 
 ## Others
 
