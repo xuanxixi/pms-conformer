@@ -4,12 +4,24 @@ This repository is modified based on * [MFA-Conformer](https://github.com/zyzisy
 
 This repository contains the training code accompanying the paper "PMS-Conformer: Conformer-based Speaker Recognition Model for Real-time Multi-scenarios.", which is published in the journal 《Computer Engineering and Applications》 with an impact factor of 4.092.
 
-<p align="center"><img width="95%" src="docs/pms-conformer.png" /></p>
+<p align="center"><img width="95%" src="docs/1.png" /></p>
 
 To handle the problems of poor performances of speaker verification systems, appearing in multiple scenarios with cross-domain utterances, long-duration utterances and noisy utterances, a real-time robust speaker recognition model, PMS-Conformer, is designed based on Conformer in this paper. The architecture of the PMS-Conformer is inspired by the state-of-the-art model named MFA-Conformer. PMS-Conformer has made the improvements on the acoustic feature extractor, network components and loss calculation module of MFA-Conformer respectively, having the novel and effective acoustic feature extractor and the robust speaker embedding extractor with high generalization capability. PMS-Conformer is trained on VoxCeleb1&2 dataset, and it is compared with the baseline MFA-Conformer and ECAPA-TDNN, and extensive comparison experiments are conducted on the speaker verification tasks. The experimental results show that on VoxMovies with cross-domain utterances, SITW with long-duration utterances and VoxCeleb-O processed by adding noise to its utterances, the ASV system built with PMS-Conformer is more competitive than those built with MFA-Conformer and ECAPA-TDNN respectively.  Moreover, the trainable params and RTF of the speaker embedding extractor of PMS-Conformer are significantly lower than those of ECAPA-TDNN. All evaluation experiment results demonstrate that PMS-Conformer exhibits good performances in real-time multi- scenarios.
 ## System Description
 
 The specific details can be found of my paper "Conformer-based Speaker Recognition Model for Real-time Multi-scenarios,", please check the Session 1, `PMS-Conformer`.
+
+## Acoustic Feature Extractor
+
+<p align="center"><img width="75%" src="docs/2.png"/></p>
+
+## Conv_Conformer Component
+
+<p align="center"><img width="75%" src="docs/3.png"/></p>
+
+## Sub-center AAM-Softmax 
+
+<p align="center"><img width="75%" src="docs/4.png"/></p>
 
 ### Dependencies
 
@@ -81,23 +93,25 @@ python3 main.py \
 
 ### Main scenario.
 
-<p align="center"><img width="95%" src="docs/main-results.png" /></p>
+<p align="center"><img width="95%" src="docs/5.png" /></p>
 
 ### Cross-domain scenario.
 
-<p align="center"><img width="75%" src="docs/cross-domain-results.png"/></p>
+<p align="center"><img width="75%" src="docs/6.png"/></p>
+
+<p align="center"><img width="75%" src="docs/7.png"/></p>
 
 ### Long-duration scenario.
 
-<p align="center"><img width="55%" src="docs/long-duration-results.png" /></p>
+<p align="center"><img width="55%" src="docs/8.png" /></p>
 
 ### Different noise scenario.
 
-<p align="center"><img width="60%" src="docs/different-noise-results.png"/></p>
+<p align="center"><img width="60%" src="docs/9.png"/></p>
 
 ### Ablation experiments.
 
-<p align="center"><img width="60%" src="docs/ablation-experiments-results.png"/></p>
+<p align="center"><img width="60%" src="docs/10.png"/></p>
 
 ## Others
 
