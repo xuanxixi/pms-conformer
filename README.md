@@ -2,7 +2,7 @@
 
 This repository is modified based on * [MFA-Conformer](https://github.com/zyzisyz/mfa_conformer).
 
-This repository contains the training code accompanying the paper "PMS-Conformer: Conformer-based Speaker Recognition Model for Real-time Multi-scenarios.", which is published in the journal 《Computer Engineering and Applications》 with an impact factor of 4.093.
+This repository contains the training code accompanying the paper "PMS-Conformer: Conformer-based Speaker Recognition Model for Real-time Multi-scenarios.", which is published in the journal 《Computer Engineering and Applications》 with an impact factor of **4.093**.
 
 <p align="center"><img width="95%" src="docs/1.png" /></p>
 
@@ -113,6 +113,10 @@ python3 main.py \
 
 <p align="center"><img width="75%" src="docs/10.png"/></p>
 
+### Conclusion
+
+In this paper, a novel real-time and multi-scenario robust automatic speaker recognition network model—PMS-Conformer—is proposed. The RTF (Real-Time Factor) of the PMS-Conformer speaker embedding extractor is 0.0172, **achieving real-time recognition performance (RTF < 0.1)**. On the primary evaluation test sets **VoxCelebO**, **SITW.Dev (core-core)**, and **SITW.Eval (core-core)**, PMS-Conformer-ASV attained EERs of **0.66%**, **1.38%**, and **1.39%**, respectively, and minDCFs of **0.0905**, **0.1388**, and **0.1347**, respectively. In cross-domain scenarios, long-duration speech scenarios, and noisy environments, PMS-Conformer-ASV demonstrated a significant advantage in EER over MFA-Conformer-ASV and ECAPA-TDNN-ASV. Ablation experiments reveal that the acoustic feature extractor Mel-MPCs and the Sub-center AAM-Softmax loss function positively contribute to ASV system performance. The Conv_Conformer module, which integrates local and global feature modeling, enhances the extraction of robust speaker embeddings, providing insights for future ASV system design. In future work, a speaker verification system based on the PMS-Conformer model will be deployed on edge computing devices to conduct real-time speaker recognition research.
+
 ## Others
 
 What's more, here are some tips might be useful:
@@ -131,7 +135,16 @@ If you find this code useful for your research, please cite our paper.
   title={Conformer-based Speaker Recognition Model for Real-time Multi-scenarios},
   author={Xuan Xi and Han Runping and Gao Jingxin},
   journal={Computer Engineering and Applications},
-  doi={10.3778/j.issn.1002-8331.2210-0145},
-  year={2023}
+  year={2024},
+  doi={10.3778/j.issn.1002-8331.2210-0145}
+}
+```
+```
+@article{宣茜2024,
+  title={基于Conformer的实时多场景说话人识别模型},
+  author={宣茜, 韩润萍, 高静欣},
+  journal={计算机工程与应用},
+  year={2024},
+  doi={10.3778/j.issn.1002-8331.2210-0145}
 }
 ```
