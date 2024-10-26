@@ -2,7 +2,7 @@
 
 This repository is modified based on * [MFA-Conformer](https://github.com/zyzisyz/mfa_conformer).
 
-This repository contains the training code accompanying the paper "PMS-Conformer: Conformer-based Speaker Recognition Model for Real-time Multi-scenarios.", which is published in the journal 《Computer Engineering and Applications》 with an impact factor of **4.093**.
+This repository contains the training code accompanying the paper "PMS-Conformer: Conformer-based Speaker Recognition Model for Real-time Multi-scenarios.", which is published in the journal 《Computer Engineering and Applications》 with an impact factor of **4.540**.
 
 <p align="center"><img width="95%" src="docs/1.png" /></p>
 
